@@ -1,0 +1,521 @@
+{
+  "id": "bf1051bc-e4e4-4f7d-bf77-1013cb7b9876",
+  "version": "2.0",
+  "name": "IMDB_Test",
+  "url": "https://www.imdb.com/?ref_=login",
+  "tests": [{
+    "id": "45a5bf33-1448-44b0-a218-2e07e889fd3b",
+    "name": "Verify that user can add a movie to watchlist",
+    "commands": [{
+      "id": "1728887c-9c1a-4680-8ffd-a2a62505ae3e",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.imdb.com/?ref_=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f9fdded-1898-48f0-80c8-df32b2e42523",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x984",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bc7cd182-7b38-4d1f-928d-a92f53dc4c97",
+      "comment": "",
+      "command": "click",
+      "target": "css=.latest-picks .ipc-poster-card:nth-child(1) > .ipc-poster .ipc-icon",
+      "targets": [
+        ["css=.latest-picks .ipc-poster-card:nth-child(1) > .ipc-poster .ipc-icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "64e994e3-c08c-4a0d-bf32-fe37818fa50c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ipc-button--single-padding:nth-child(1) > .ipc-button__text:nth-child(2)",
+      "targets": [
+        ["css=.ipc-button--single-padding:nth-child(1) > .ipc-button__text:nth-child(2)", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/div[4]/a/div", "xpath:idRelative"],
+        ["xpath=//div[4]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cbeaaaaa-aae4-4b7a-a85d-294d1748a20a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Forrest Gump",
+      "targets": [
+        ["linkText=Forrest Gump", "linkText"],
+        ["css=.lister-item-header > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Forrest Gump')]", "xpath:link"],
+        ["xpath=//div[@id='page-1']/div/div/div[2]/h3/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/title/tt0109830/?ref_=wl_li_tt')]", "xpath:href"],
+        ["xpath=//h3/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Forrest Gump')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "71c5f9e0-e142-448a-967c-0e63fa9f9bc4",
+    "name": "Verify that user can search by movie titles",
+    "commands": [{
+      "id": "7ddb3f9f-8819-4601-a343-e6f537acae2f",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.imdb.com/?ref_=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fceb4a8b-4736-4105-8543-738f988ffc86",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1272x656",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8f100ee-e97d-4132-bbc2-4839c7ce887b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ipc-icon--arrow-drop-down:nth-child(1)",
+      "targets": [
+        ["css=.ipc-icon--arrow-drop-down:nth-child(1)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec445785-a5bf-4e61-a834-df93d06ed94b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Titles",
+      "targets": [
+        ["linkText=Titles", "linkText"],
+        ["css=.\\_1xTnkpad08eEWkqotpqi4r:nth-child(2)", "css:finder"],
+        ["xpath=//span[@id='navbar-search-category-select-contents']/ul/a[2]", "xpath:idRelative"],
+        ["xpath=//span/ul/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Titles')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b8ae65f-b82d-44c5-a71e-b02d9ffe2c63",
+      "comment": "",
+      "command": "click",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2104233-62c9-430f-9741-b672425145e4",
+      "comment": "",
+      "command": "type",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "romeo"
+    }, {
+      "id": "0668e343-d82c-4b54-a0f6-96f86be49dd7",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }]
+  }, {
+    "id": "4f9512d2-86e0-44c1-b35c-abd14d41d5ea",
+    "name": "Verify that Ranks in “Top rated movies” stay with titles when user hides titles they’ve already seen.",
+    "commands": [{
+      "id": "f1e05710-b017-4384-8866-023806a85054",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.imdb.com/?ref_=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e938449-ac35-484a-841d-1f95210dc39b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1272x656",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72eef4ac-f375-468e-9b81-ef10089f668c",
+      "comment": "",
+      "command": "click",
+      "target": "css=#imdbHeader-navDrawerOpen--desktop path:nth-child(2)",
+      "targets": [
+        ["css=#imdbHeader-navDrawerOpen--desktop path:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "76f9df9d-a282-45b3-bac4-37c4d7315ff9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Top Rated Movies",
+      "targets": [
+        ["linkText=Top Rated Movies", "linkText"],
+        ["css=.\\_1K0S44SUv8s7pXTI-caWlb:nth-child(2) .ipc-list__item:nth-child(3)", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/aside/div/div[2]/div/div/span/div/div/ul/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/chart/top/?ref_=nv_mv_250')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Top Rated Movies')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f48f81f6-bbf9-4890-9ba4-7ae2639371fc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.seen-widget-tt0068646 .unseen",
+      "targets": [
+        ["css=.seen-widget-tt0068646 .unseen", "css:finder"],
+        ["xpath=//div[@id='main']/div/span/div/div/div[3]/table/tbody/tr[2]/td[4]/div/div[2]/div[3]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[4]/div/div[2]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "08223700-e72b-4055-96bc-e8b35208129b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.seen-widget-tt0068646 .on:nth-child(8)",
+      "targets": [
+        ["css=.seen-widget-tt0068646 .on:nth-child(8)", "css:finder"],
+        ["xpath=//div[@id='main']/div/span/div/div/div[3]/table/tbody/tr[2]/td[4]/div/div/div/ol/li[8]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[4]/div/div/div/ol/li[8]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "45a802aa-024e-4801-87f4-ffe3471caf04",
+      "comment": "",
+      "command": "click",
+      "target": "id=hide-seen-top-250",
+      "targets": [
+        ["id=hide-seen-top-250", "id"],
+        ["css=#hide-seen-top-250", "css:finder"],
+        ["xpath=//input[@id='hide-seen-top-250']", "xpath:attributes"],
+        ["xpath=//div[@id='sidebar']/div[4]/span/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "044927c4-1663-4776-8da9-94ce861b98c5",
+    "name": "Verify that Box office sorts movies by Weekend incomes",
+    "commands": [{
+      "id": "b9e05f0f-62bc-4a22-bd2e-e2a76ddd1074",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.imdb.com/?ref_=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eca76a26-f78b-4bf0-8528-8d17b6ce6af4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1272x656",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4018516-0810-4c3b-a438-90c4f8f80723",
+      "comment": "",
+      "command": "click",
+      "target": "css=#imdbHeader-navDrawerOpen--desktop path:nth-child(2)",
+      "targets": [
+        ["css=#imdbHeader-navDrawerOpen--desktop path:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "72d2da0c-6c59-4b74-b0bf-962d415c669f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Top Box Office",
+      "targets": [
+        ["linkText=Top Box Office", "linkText"],
+        ["css=.\\_1K0S44SUv8s7pXTI-caWlb:nth-child(2) .ipc-list__item:nth-child(6)", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/aside/div/div[2]/div/div/span/div/div/ul/a[6]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/chart/boxoffice/?ref_=nv_ch_cht')]", "xpath:href"],
+        ["xpath=//a[6]", "xpath:position"],
+        ["xpath=//a[contains(.,'Top Box Office')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d02f4d6d-76ad-4c20-84e3-d393c234b44d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h4",
+      "targets": [
+        ["css=h4", "css:finder"],
+        ["xpath=//div[@id='boxoffice']/h4", "xpath:idRelative"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Weekend of February 28 - March 1, 2020')]", "xpath:innerText"]
+      ],
+      "value": "Weekend of February 28 - March 1, 2020"
+    }]
+  }, {
+    "id": "d784185f-b0c0-4d8a-aeb7-7e8583a2ea8d",
+    "name": "Verify that user can search for movies by 2 and more genres",
+    "commands": [{
+      "id": "adcfa034-270e-4d94-94b6-bb7276b3d642",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.imdb.com/?ref_=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bde72460-e952-4b8c-9d3e-8f4907c30397",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1272x656",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23b2ba8b-2eb0-4670-9479-11610241fea9",
+      "comment": "",
+      "command": "click",
+      "target": "css=#imdbHeader-navDrawerOpen--desktop > .ipc-icon",
+      "targets": [
+        ["css=#imdbHeader-navDrawerOpen--desktop > .ipc-icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "d80c8e47-9cb0-429b-bbed-cdb0c4536fcf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Browse Movies by Genre",
+      "targets": [
+        ["linkText=Browse Movies by Genre", "linkText"],
+        ["css=.nav-link--hideXS:nth-child(5)", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/aside/div/div[2]/div/div/span/div/div/ul/a[5]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.imdb.com/feature/genre/?ref_=nv_ch_gr')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'Browse Movies by Genre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d6564ae-8879-4fd0-b071-652cf3ab9325",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "655684f1-391b-4e19-815f-bf710c89d24f",
+    "name": "Verify that user can in Coming soon chose the exact date from which movie will be available",
+    "commands": [{
+      "id": "56554c53-b24e-40a5-9646-2bbb7c99d426",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.imdb.com/?ref_=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26fc9d18-9345-4f4e-a05f-121efbba00cf",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1272x656",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a976abe-a7ba-409a-bd6b-7f28d773b433",
+      "comment": "",
+      "command": "click",
+      "target": "css=#imdbHeader-navDrawerOpen--desktop > .ipc-icon",
+      "targets": [
+        ["css=#imdbHeader-navDrawerOpen--desktop > .ipc-icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf2a63d7-f514-4f24-bf0b-db7359d8fc50",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Coming Soon",
+      "targets": [
+        ["linkText=Coming Soon", "linkText"],
+        ["css=.nav-link--hideXS:nth-child(9)", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/aside/div/div[2]/div/div/span/div/div/ul/a[9]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.imdb.com/coming-soon/?ref_=nv_mv_cs')]", "xpath:href"],
+        ["xpath=//a[9]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d689aba-288c-4225-836b-b66b2b87ee31",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Mar 13",
+      "targets": [
+        ["linkText=Mar 13", "linkText"],
+        ["css=.desc > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Mar 13')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#Mar13')]", "xpath:href"],
+        ["xpath=//div/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Mar 13')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "36ada9ea-d7a5-4fdc-abfe-e5fac981a474",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Mar 20",
+      "targets": [
+        ["linkText=Mar 20", "linkText"],
+        ["css=.desc > a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Mar 20')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div/div/div/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#Mar20')]", "xpath:href"],
+        ["xpath=//div/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Mar 20')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b5ffd8b-8cec-4a37-8cae-173ad29fb97a",
+      "comment": "",
+      "command": "click",
+      "target": "name=sort",
+      "targets": [
+        ["name=sort", "name"],
+        ["css=.sort_field:nth-child(2)", "css:finder"],
+        ["xpath=//select[@name='sort']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div/div/div/div[3]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "daba824e-5d6b-4161-9b76-6d89eb815989",
+      "comment": "",
+      "command": "select",
+      "target": "name=sort",
+      "targets": [],
+      "value": "label=regexp:April\\s+2020"
+    }, {
+      "id": "79e917a5-8761-464c-bcc3-cef01c738b63",
+      "comment": "",
+      "command": "click",
+      "target": "name=sort",
+      "targets": [
+        ["name=sort", "name"],
+        ["css=.sort_field:nth-child(2)", "css:finder"],
+        ["xpath=//select[@name='sort']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div/div/div/div[3]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "becd0e4e-6c4f-42b5-b34f-ae876245efce",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Apr 10",
+      "targets": [
+        ["linkText=Apr 10", "linkText"],
+        ["css=.desc > a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Apr 10')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div/div/div/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#Apr10')]", "xpath:href"],
+        ["xpath=//div/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Apr 10')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "742570fe-c143-49a0-b6b6-fd7a680cf954",
+    "name": "Verify that user can in Movie News see All top Movie News",
+    "commands": [{
+      "id": "e760a713-bc29-4988-bed1-700bc76ea90a",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.imdb.com/?ref_=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7cb6b601-14b0-4dca-9de8-28b83bab7f9b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1272x656",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9e86132-ce85-4e05-9a8c-9227e3329c16",
+      "comment": "",
+      "command": "click",
+      "target": "css=#imdbHeader-navDrawerOpen--desktop > .ipc-icon",
+      "targets": [
+        ["css=#imdbHeader-navDrawerOpen--desktop > .ipc-icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "85ea1457-5271-4538-b88d-5d34e7084bdd",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.\\_31OEZk7-hOsGgr6aTOS5te rect",
+      "targets": [
+        ["css=.\\_31OEZk7-hOsGgr6aTOS5te rect", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "79e666fe-27f5-493f-809f-176818769e19",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.\\_31OEZk7-hOsGgr6aTOS5te rect",
+      "targets": [
+        ["css=.\\_31OEZk7-hOsGgr6aTOS5te rect", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea464fce-48ce-47bc-ba4a-07d4f18171b1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Movie News",
+      "targets": [
+        ["linkText=Movie News", "linkText"],
+        ["css=.\\_1K0S44SUv8s7pXTI-caWlb:nth-child(2) .ipc-list__item:nth-child(12)", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/aside/div/div[2]/div/div/span/div/div/ul/a[12]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/news/movie/?ref_=nv_nw_mv')]", "xpath:href"],
+        ["xpath=//a[12]", "xpath:position"],
+        ["xpath=//a[contains(.,'Movie News')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "29537892-d637-48fc-8f24-b9cfc329eb09",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=See All Top News »",
+      "targets": [
+        ["linkText=See All Top News »", "linkText"],
+        ["css=.aux-content-widget-4:nth-child(6) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'See All Top News »')]", "xpath:link"],
+        ["xpath=//aside[@id='sidebar']/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/news/top?ref_=nwc_sb_nwc_sm')]", "xpath:href"],
+        ["xpath=//aside/div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'See All Top News »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "65b9fcfb-3eac-46e2-9361-51b73adbc335",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.imdb.com/?ref_=login"],
+  "plugins": []
+}
